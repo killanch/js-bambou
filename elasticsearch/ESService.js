@@ -78,7 +78,7 @@ export default class ESService {
         if (Object.keys(parameters).length === 0)
             return configuration.id;
 
-        return `${configuration.vizID}-${configuration.id}[${JSON.stringify(parameters)}]`;
+        return `${configuration.vizID ? configuration.vizID : configuration.id}-${configuration.id}[${JSON.stringify(parameters)}]`;
 
     }
 
